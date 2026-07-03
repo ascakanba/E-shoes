@@ -1,0 +1,47 @@
+/* ========================================
+   COMPONENTE: HEADER
+   ======================================== */
+
+.site-header {
+ background-color: aliceblue;
+ position: fixed;
+ top: 20px;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 1260px;
+ border-radius: 15px;
+ z-index: 1000;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 1rem 2rem;
+}
+.logo img {
+  height: 3em;
+  
+}
+
+.site-nav a,
+.user-nav a {
+  font-size: 1.25rem;
+}
+
+.site-nav ul{
+display: flex;
+list-style: none;
+gap: 2.5rem;
+}
+
+.site-nav a,
+.user-nav a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.site-nav a:hover,
+.user-nav a:hover {
+  color: var(--color-hover-links);
+  transform: translateY(-2px);
+}

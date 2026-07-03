@@ -2,6 +2,7 @@
 
 :root{
     --fonte-principal: 'Ubuntu', sans-serif;
+    --color-hover-links: rgb(4, 26, 136);
   --color-primary: #3498db;
   --color-secondary: #2ecc71; 
 }

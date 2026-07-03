@@ -1,0 +1,13 @@
+/* ========================================
+   COMPONENTES CSS - E-SHOES
+   
+   Importação de todos os componentes
+   ======================================== */
+
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./product-card.css');
+@import url('./product-grid.css');
+@import url('./newsletter.css');
+@import url('./panel.css');
+@import url('./footer.css');

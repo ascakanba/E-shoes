@@ -1,0 +1,220 @@
+/* ========================================
+   COMPONENTE: PRODUCT GRID
+   ======================================== */
+
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.grid-produtos--dense {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.grid-produtos--spacious {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+/* 4 colunas - Desktop grande */
+@media (min-width: 1400px) {
+  .grid-produtos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-produtos--dense {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid-produtos--spacious {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 3 colunas - Desktop */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .grid-produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-produtos--dense {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-produtos--spacious {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2 colunas - Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid-produtos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .grid-produtos--dense {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-produtos--spacious {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 1 coluna - Mobile */
+@media (max-width: 767px) {
+  .grid-produtos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-produtos--dense {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-produtos--spacious {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Filtro de Produtos */
+.produtos-filtro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: var(--color-light-gray);
+  border-radius: 0.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.produtos-filtro__info {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.produtos-filtro__sort {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.produtos-filtro__select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.25rem;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggle__btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-light);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.view-toggle__btn:hover,
+.view-toggle__btn--active {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-color: var(--color-primary);
+}
+
+/* Container de Produtos com Sidebar */
+.produtos-wrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.produtos-sidebar {
+  background-color: var(--color-light-gray);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.produtos-main {
+  flex: 1;
+}
+
+/* Responsivo - Sem Sidebar em Mobile */
+@media (max-width: 768px) {
+  .produtos-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .produtos-sidebar {
+    position: static;
+  }
+
+  .produtos-filtro {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .produtos-filtro__info,
+  .produtos-filtro__sort,
+  .view-toggle {
+    width: 100%;
+  }
+
+  .produtos-filtro__select,
+  .view-toggle__btn {
+    flex: 1;
+  }
+}
+
+/* Loading State */
+.grid-produtos--loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Empty State */
+.grid-produtos--empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.grid-produtos__empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.grid-produtos__empty-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.grid-produtos__empty-text {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
