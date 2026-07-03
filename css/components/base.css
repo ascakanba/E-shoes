@@ -1,17 +1,6 @@
-/* base.css */
-:root {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
-}
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #222;
+  font-family: var(--font-family);
+  color: #333333;
 }
