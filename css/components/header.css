@@ -8,7 +8,7 @@
  top: 20px;
  left: 50%;
  transform: translateX(-50%);
- width: 1260px;
+ width: calc(100% - 3.2rem);
  border-radius: 15px;
  z-index: 1000;
  display: flex;
@@ -26,7 +26,8 @@
   font-size: 1.25rem;
 }
 
-.site-nav ul{
+.site-nav ul,
+.user-nav ul{
 display: flex;
 list-style: none;
 gap: 2.5rem;
