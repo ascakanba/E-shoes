@@ -12,8 +12,6 @@
   justify-content: center;
   color: var(--color-light);
   text-align: center;
-  overflow: hidden;
-  margin: 2rem 0;
 }
 
 .hero::before {
